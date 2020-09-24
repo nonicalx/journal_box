@@ -1,0 +1,115 @@
+.title {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: white;
+}
+
+.title header {
+  font-family: Grandstander;
+  font-size: 30px;
+}
+
+.journal_card {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.journal_card:hover {
+  transform: scale(1.05, 1.05);
+  border: 2px solid gray;
+}
+
+.time_stamp {
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+  text-align: right;
+  display: block;
+}
+
+.fab_circle {
+  background: lightgray;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.fab_circle:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.fab_circle:focus {
+  outline: none;
+}
+
+.close_modal span {
+  display: inline-block;
+  background: lightgray;
+  font-size: 19px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.close_modal:focus {
+  outline: none !important;
+}
+
+::placeholder {
+  color: lightgray !important;
+}
+
+.journal_date {
+  font-size: 12px;
+  color: gray;
+}
+
+.settings {
+  color: gray;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.settings:active {
+  transform: rotate(360deg);
+}
+
+.set_bar {
+  position: absolute;
+  background-color: rgb(14, 13, 13);
+  height: 70vh;
+  width: 40px;
+  border-radius: 18px;
+  opacity: 0.1;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+  top: -100%;
+  right: 8px;
+  z-index: 4;
+  transition: all 0.8s;
+}
+
+.setting_bar {
+  background-color: rgb(14, 13, 13);
+  height: 70vh;
+  width: 40px;
+  border-radius: 20px;
+  opacity: 0.9;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+  top: 65px;
+  right: 8px;
+  z-index: 4;
+  transition: all 0.8s;
+}
