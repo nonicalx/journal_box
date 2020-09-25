@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import JournalItem from "./JournalItem";
 
 const JournalList = (props) => {
@@ -12,7 +12,7 @@ const JournalList = (props) => {
     ) {
       setEntries(JSON.parse(localStorage.getItem("journal-box-secrets")));
     } else {
-      //setEntries(entries);
+      // setEntries(entries);
     }
   }, []);
 
@@ -20,7 +20,7 @@ const JournalList = (props) => {
     return (
       entries.length > 0 &&
       entries.map((entry, i) => (
-        <JournalItem title={entry.title} body={entry.journalBody} key={i} />
+        <JournalItem title={entry.title} body={entry.journalBody} i={i} />
       ))
     );
   };

@@ -9,33 +9,28 @@ import {
 } from "./components/index";
 import { encryptText, decryptText } from "./utils/encryptor";
 
-function App() {
+function App(props) {
   const [journal, setJournal] = useState({});
   const [entries, setEntries] = useState([]);
   const [openSetting, setOpenSetting] = useState(false);
 
-  useEffect(() => {
-    console.log("render app");
-  }, [entries]);
+  useEffect(() => {}, [entries]);
 
   decryptText(encryptText("anybody Wey no want to "));
 
-  const handleSave = async () => {
+  const handleSave = () => {
     let tempEntries = entries;
     tempEntries.push(journal);
 
-    await setEntries(tempEntries);
+    setEntries(tempEntries);
 
     saveToLocal(tempEntries);
+    props.history.push("/");
   };
 
   const saveToLocal = (data) => {
     localStorage.setItem("journal-box-secrets", JSON.stringify(data));
   };
-
-  console.log();
-
-  console.log("Entries", entries);
 
   return (
     <div>

@@ -1,10 +1,10 @@
 import React from "react";
-import { decryptText, encryptText } from "../utils/encryptor";
+import { decryptText } from "../utils/encryptor";
 
 const JournalItem = (props) => {
-  var { title, body, key } = props;
+  var { title, body, i } = props;
   return (
-    <div className="col-lg-2 col-md-4 py-3" key={key}>
+    <div className="col-lg-2 col-md-4 py-3" key={i}>
       <article className="journal_card p-2">
         <h5>{decryptText(title)}</h5>
         <p className="mb-0">{decryptText(body)}</p>

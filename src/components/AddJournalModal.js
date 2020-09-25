@@ -1,5 +1,5 @@
 import React from "react";
-import { encryptText, decryptText } from "../utils/encryptor";
+import { encryptText } from "../utils/encryptor";
 
 const AddJournalModal = (props) => {
   var { journal, setJournal, handleSave } = props;
@@ -23,7 +23,6 @@ const AddJournalModal = (props) => {
     setJournal({ ...journal, [e.target.id]: encryptText(e.target.value) });
   };
 
-  console.log(journal);
   return (
     <div>
       <div
