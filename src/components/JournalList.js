@@ -12,7 +12,6 @@ const JournalList = (props) => {
     ) {
       setEntries(JSON.parse(localStorage.getItem("journal-box-secrets")));
     } else {
-      // setEntries(entries);
     }
   }, []);
 
@@ -20,7 +19,12 @@ const JournalList = (props) => {
     return (
       entries.length > 0 &&
       entries.map((entry, i) => (
-        <JournalItem title={entry.title} body={entry.journalBody} i={i} />
+        <JournalItem
+          title={entry.title}
+          body={entry.journalBody}
+          i={i}
+          date={entry.date}
+        />
       ))
     );
   };

@@ -20,7 +20,11 @@ const AddJournalModal = (props) => {
   };
 
   const handleEntry = (e) => {
-    setJournal({ ...journal, [e.target.id]: encryptText(e.target.value) });
+    setJournal({
+      ...journal,
+      [e.target.id]: encryptText(e.target.value),
+      date: getDate(),
+    });
   };
 
   return (
