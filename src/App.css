@@ -16,6 +16,7 @@
   border: 2px solid lightgray;
   border-radius: 10px;
   transition: 0.5s;
+  word-wrap: break-word;
 }
 
 .journal_card:hover {
