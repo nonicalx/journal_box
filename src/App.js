@@ -25,7 +25,7 @@ function App(props) {
     setEntries(tempEntries);
 
     saveToLocal(tempEntries);
-    props.history.push("/");
+    window.location = "/";
   };
 
   const saveToLocal = (data) => {
